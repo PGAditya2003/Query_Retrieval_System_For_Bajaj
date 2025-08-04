@@ -7,8 +7,7 @@ print("Connected to DB:", conn)
 conn.close()
 
 # Create FastAPI app instance
-app = FastAPI(title="Intelligent File Storage API")
-
+app = FastAPI(title="Query_Retrieval & File Storage API")
 
 app.include_router(upload.router, prefix="/api/files")
 app.include_router(files.router, prefix="/api/files")
