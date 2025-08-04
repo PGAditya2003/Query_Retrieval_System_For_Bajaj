@@ -9,8 +9,8 @@ conn.close()
 # Create FastAPI app instance
 app = FastAPI(title="Query_Retrieval & File Storage API")
 
-app.include_router(upload.router, prefix="/api/files")
-app.include_router(files.router, prefix="/api/files")
+app.include_router(upload.router, prefix="/api/files", tags=["File Upload"])
+app.include_router(files.router, prefix="/api/files", tags=["Files List"])
 app.include_router(query.router, prefix="/api/search")
 
 @app.get("/")
